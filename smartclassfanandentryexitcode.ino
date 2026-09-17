@@ -11,7 +11,7 @@
 #include <DHT.h>
 
 // ================== GOOGLE SCRIPT ==================
-#define GOOGLE_SCRIPT_ID "AKfycbwAFuMWLF7ONPgxiXou9xzWtLSu2rSwOvl9pSPBIJXAUYg_Jpw1z7qnFbBo-mrRdzeuLg"
+#define GOOGLE_SCRIPT_ID "// your API KEY //"
 
 // ================== OLED ==================
 #define SCREEN_WIDTH 128
@@ -23,8 +23,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&Serial2);
 
 // ================== WIFI ==================
-const char* ssid = "esp32";
-const char* password = "leteam1234";
+const char* ssid = "WI-FI Name";
+const char* password = "Password";
 bool wifiConnected = false;
 
 // ================== TIME ==================
@@ -294,16 +294,16 @@ int getFingerprintIDez() {
 }
 
 void setName(int id) {
-  if (id == 1) NAME = "Prasanna";
-  else if (id == 2) NAME = "Rishyanth";
-  else if (id == 3) NAME = "Narayana";
-  else if (id == 4) NAME = "Bluvana";
-  else if (id == 5) NAME = "HEMA";
-  else if (id == 6) NAME = "shammi";
-  else if (id == 7) NAME = "Preethi";
-  else if (id == 8) NAME = "Kesava";
-  else if (id == 9) NAME = "Praveen";
-  else if (id == 29) NAME = "Sindhu";
+  if (id == 1) NAME = "Student1";
+  else if (id == 2) NAME = "Student2";
+  else if (id == 3) NAME = "Student3";
+  else if (id == 4) NAME = "Student4";
+  else if (id == 5) NAME = "Student5";
+  else if (id == 6) NAME = "Student6";
+  else if (id == 7) NAME = "Student7";
+  else if (id == 8) NAME = "Student8";
+  else if (id == 9) NAME = "Student9";
+  else if (id == 29) NAME = "Student10";
   else NAME = "Student";
 }
 
