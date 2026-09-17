@@ -1,0 +1,31 @@
+function doPost(e) {
+
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+    // Parse JSON body
+    var data = JSON.parse(e.postData.contents);
+
+    var id = data.id || "";
+    var name = data.name || "";
+    var entry = data.entry || "";
+    var exit = data.exit || "";
+
+    sheet.appendRow([
+      new Date(),
+      id,
+      name,
+      entry,
+      exit
+    ]);
+
+    return ContentService
+      .createTextOutput("OK")
+      .setMimeType(ContentService.MimeType.TEXT);
+
+  } catch (err) {
+    return ContentService
+      .createTextOutput("ERROR: " + err)
+      .setMimeType(ContentService.MimeType.TEXT);
+  }
+}
